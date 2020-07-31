@@ -1,0 +1,8 @@
+{
+    "python.pythonPath": "D:\\poems_precode\\poems_project\\env\\Scripts\\python.exe",
+    "editor.rulers": [79],
+    "python.linting.pylintArgs": [
+        "--load-plugins",
+        "pylint_django"
+    ],
+}

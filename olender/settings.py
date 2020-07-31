@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'poems',
     'search',
-    # 'poem_parser',
+    'poem_parser',
 
 ]
 
