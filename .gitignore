@@ -79,7 +79,7 @@ todo.txt
 *.env
 
 # sqlite3
-*.sqlite3
+
 *.sqlite3-journal
 
 
