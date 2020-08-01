@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Стихотворение: {{ poem.title }}{% endblock title %}
+
+{% block content %}
+<div class="d-flex">
+  <div>
+    <a class="btn btn-info-outline btn-sm" href="{% url 'poet' poet_pk=poem.author.pk %}">← Назад</a>
+  </div>
+  <div class="flex-grow-1">
+    <h2 class="text-center mb-5">{{ poem.author.full_name }}</h2>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-12 col-md-10 col-lg-8 mx-auto">
+      <div class="card">
+        <div class="card-body">
+          <h1 class="text-center mb-5">{{ poem.title }}</h1>
+          <div class="poem-text">
+            {{ poem.text|linebreaksbr }}
+          </div>
+          <br>
+          <p class="poem-year">{{ poem.year }} г.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+{% endblock content %}

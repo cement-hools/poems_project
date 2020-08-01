@@ -5,7 +5,7 @@ from poems.models import Poet, Poem
 
 
 def search(request):
-    template_name = 'search.html'
+    template_name = 'search/search.html'
     search = False
 
     query = request.GET.get('q', None)
@@ -13,7 +13,7 @@ def search(request):
         search = True
 
         poets = list(Poet.objects.filter(
-            Q(first_name__icontains=query) | Q(last_name__icontains=query)
+            Q(first_name__icontains=query)| Q(last_name__icontains=query)
         ))
         poems = list(Poem.objects.filter(
             Q(title__icontains=query) | Q(text__icontains=query)
